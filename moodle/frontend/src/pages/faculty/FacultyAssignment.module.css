@@ -1,0 +1,40 @@
+.loading { padding: 48px; text-align: center; color: var(--text-muted); }
+.page {}
+.breadcrumb { font-size: 13px; color: var(--text-muted); margin-bottom: 16px; }
+.link { color: var(--primary); cursor: pointer; }
+.link:hover { text-decoration: underline; }
+
+.infoCard { background: #fff; border: 1px solid var(--border); border-radius: 6px; padding: 20px 24px; margin-bottom: 20px; }
+.title { font-size: 22px; font-weight: 700; color: var(--text); margin-bottom: 8px; }
+.meta { font-size: 13px; color: var(--text-muted); display: flex; align-items: center; gap: 6px; flex-wrap: wrap; margin-bottom: 10px; }
+.dot { color: #ccc; }
+.desc { font-size: 14px; color: var(--text); background: #f8f9fa; border-radius: 4px; padding: 10px 14px; margin-top: 10px; }
+
+.statsRow { display: flex; gap: 16px; margin-top: 16px; flex-wrap: wrap; }
+.stat { background: #f8f9fa; border: 1px solid var(--border); border-radius: 6px; padding: 12px 20px; text-align: center; min-width: 90px; }
+.statNum { font-size: 26px; font-weight: 700; color: var(--primary); }
+.statLabel { font-size: 11px; color: var(--text-muted); margin-top: 2px; }
+
+.filterTabs { display: flex; gap: 0; border: 1px solid var(--border); border-radius: 4px; overflow: hidden; margin-bottom: 16px; width: fit-content; }
+.filterBtn { background: #f8f9fa; border: none; border-right: 1px solid var(--border); padding: 8px 16px; font-size: 13px; font-weight: 500; color: var(--text-muted); cursor: pointer; transition: background 0.15s; }
+.filterBtn:last-child { border-right: none; }
+.filterBtn:hover { background: #e9ecef; }
+.filterActive { background: var(--primary) !important; color: #fff !important; }
+
+.tableWrap { background: #fff; border: 1px solid var(--border); border-radius: 6px; overflow: auto; }
+.table { width: 100%; border-collapse: collapse; min-width: 700px; }
+.table thead tr { background: #f8f9fa; border-bottom: 2px solid var(--border); }
+.table th { padding: 12px 14px; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; color: var(--text-muted); text-align: left; white-space: nowrap; }
+.table tbody tr { border-bottom: 1px solid #f1f3f5; transition: background 0.1s; }
+.table tbody tr:last-child { border-bottom: none; }
+.table tbody tr:hover { background: #f8f9fa; }
+.table td { padding: 12px 14px; font-size: 14px; color: var(--text); }
+.num { color: var(--text-muted); font-size: 13px; }
+.name { font-weight: 600; }
+.regNo { background: #e9ecef; padding: 2px 6px; border-radius: 3px; font-size: 12px; }
+.dept { color: var(--text-muted); font-size: 13px; }
+.date { font-size: 12px; color: var(--text-muted); }
+.fileLink { color: var(--primary); font-size: 13px; font-weight: 600; }
+.fileLink:hover { text-decoration: underline; }
+.noFile { color: var(--text-muted); }
+.emptyRow { text-align: center; padding: 32px !important; color: var(--text-muted); }

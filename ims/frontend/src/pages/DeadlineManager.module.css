@@ -1,0 +1,153 @@
+.wrap { position: relative; }
+
+/* Toast notification */
+.toast {
+  position: fixed;
+  bottom: 24px; right: 24px;
+  padding: 14px 20px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  z-index: 9999;
+  max-width: 420px;
+  line-height: 1.5;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+  animation: slideInToast 0.3s ease;
+}
+.toastSuccess { background: #2c3445; color: #fff; }
+.toastError   { background: #c53030; color: #fff; }
+@keyframes slideInToast {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.header {
+  display: flex; align-items: flex-start; justify-content: space-between;
+  flex-wrap: wrap; gap: 12px;
+  background: #fff; border: 1px solid #e2e8f0;
+  border-radius: 8px 8px 0 0; padding: 16px 20px;
+}
+.title { font-size: 20px; font-weight: 700; color: #1e293b; }
+.sub   { font-size: 12px; color: #64748b; margin-top: 3px; }
+.headerRight { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.toggle { display: flex; border: 1px solid #e2e8f0; border-radius: 6px; overflow: hidden; }
+.toggle button { background: none; border: none; padding: 8px 18px; font-size: 12px; font-weight: 500; color: #64748b; cursor: pointer; transition: background 0.15s; }
+.toggle button:hover { background: #f1f5f9; }
+.toggleActive { background: #1a73e8 !important; color: #fff !important; }
+.fetchBtn { background: #4b2d8a; color: #fff; border: none; border-radius: 6px; padding: 8px 14px; font-size: 12px; font-weight: 600; cursor: pointer; transition: background 0.15s; }
+.fetchBtn:hover:not(:disabled) { background: #3a2070; }
+.fetchBtn:disabled { opacity: 0.6; cursor: not-allowed; }
+
+.summaryStrip { display: flex; gap: 20px; background: #f8fafc; border: 1px solid #e2e8f0; border-top: none; padding: 10px 20px; flex-wrap: wrap; align-items: center; }
+.summaryItem  { font-size: 13px; color: #475569; }
+
+.calNav { display: flex; align-items: center; justify-content: space-between; background: #f8fafc; border: 1px solid #e2e8f0; border-top: none; padding: 12px 20px; }
+.calNav h3 { font-size: 16px; font-weight: 700; color: #1e293b; }
+.navBtn { background: #fff; border: 1px solid #e2e8f0; border-radius: 6px; padding: 6px 14px; font-size: 13px; color: #374151; cursor: pointer; }
+.navBtn:hover { background: #f1f5f9; }
+
+.calGrid {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-top: none;
+  border-radius: 0 0 8px 8px;
+  overflow: hidden;
+  width: 100%;
+}
+.dayName {
+  background: #2c3445;
+  color: #94a3b8;
+  text-align: center;
+  padding: 10px 2px;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  min-width: 0;
+  overflow: hidden;
+}
+.cell {
+  border-right: 1px solid #f1f5f9;
+  border-bottom: 1px solid #f1f5f9;
+  padding: 6px 4px;
+  min-height: 90px;
+  min-width: 0;
+  overflow: hidden;
+  transition: background 0.1s;
+}
+.cell:hover { background: #f8fafc; }
+.empty   { background: #fafafa; cursor: default; }
+.today   { background: #eff6ff; }
+.dateNum { font-size: 12px; font-weight: 600; color: #374151; margin-bottom: 3px; width: 22px; height: 22px; display: flex; align-items: center; justify-content: center; }
+.todayNum { background: #1a73e8; color: #fff; border-radius: 50%; }
+
+.tag {
+  font-size: 10px;
+  padding: 2px 4px;
+  border-radius: 3px;
+  margin-bottom: 2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  cursor: pointer;
+  transition: opacity 0.1s;
+  display: block;
+  max-width: 100%;
+}
+.tag:hover { opacity: 0.8; }
+.evRed       { background: #fee2e2; color: #991b1b; }
+.evYellow    { background: #fef3c7; color: #92400e; }
+.evGreen     { background: #d1fae5; color: #065f46; }
+.evBlue      { background: #dbeafe; color: #1e40af; }
+.evSubmitted { background: #d1fae5; color: #065f46; }
+.evReminded  { background: #ede9fe; color: #5b21b6; }
+
+.legend { display: flex; gap: 16px; flex-wrap: wrap; margin-top: 14px; font-size: 12px; color: #475569; }
+.legend span { display: flex; align-items: center; gap: 5px; }
+.swatch { width: 12px; height: 12px; border-radius: 2px; display: inline-block; }
+.loadingBar { text-align: center; padding: 12px; font-size: 13px; color: #64748b; font-style: italic; }
+
+/* Modal */
+.overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.5); z-index: 200; display: flex; align-items: center; justify-content: center; padding: 16px; }
+.modal   { background: #fff; border-radius: 12px; padding: 24px; width: 100%; max-width: 460px; position: relative; animation: slideUp 0.2s ease; box-shadow: 0 20px 60px rgba(0,0,0,0.2); max-height: 90vh; overflow-y: auto; }
+@keyframes slideUp { from { opacity:0; transform:translateY(16px); } to { opacity:1; transform:translateY(0); } }
+.closeBtn { position: absolute; top: 14px; right: 14px; background: none; border: none; font-size: 18px; color: #94a3b8; cursor: pointer; padding: 4px 8px; border-radius: 4px; }
+.closeBtn:hover { background: #f1f5f9; color: #475569; }
+
+.eventTypeBadge { display: inline-block; background: #dbeafe; color: #1e40af; font-size: 10px; font-weight: 700; padding: 3px 10px; border-radius: 12px; letter-spacing: 0.5px; margin-bottom: 8px; }
+.modalTitle  { font-size: 17px; font-weight: 700; color: #1e293b; margin-bottom: 4px; padding-right: 32px; }
+.modalSub    { font-size: 13px; color: #64748b; margin-bottom: 16px; }
+.sourceEmail { font-size: 11px; color: #94a3b8; margin-bottom: 14px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.modalRows   { display: flex; flex-direction: column; gap: 10px; margin-bottom: 14px; }
+.modalRow    { display: flex; justify-content: space-between; align-items: center; font-size: 13px; padding: 6px 0; border-bottom: 1px solid #f8fafc; }
+.modalRow:last-child { border-bottom: none; }
+.modalRow span:first-child { color: #64748b; }
+.badge { display: inline-block; padding: 2px 10px; border-radius: 12px; font-size: 11px; font-weight: 600; }
+.badgeGreen  { background: #d1fae5; color: #065f46; }
+.badgeYellow { background: #fef3c7; color: #92400e; }
+.badgeRed    { background: #fee2e2; color: #991b1b; }
+.desc { font-size: 13px; color: #475569; background: #f8fafc; border-radius: 8px; padding: 12px; margin-bottom: 4px; line-height: 1.6; }
+.modalActions { display: flex; gap: 8px; margin-top: 20px; flex-wrap: wrap; }
+.btnMoodle       { background: #4b2d8a; color: #fff; border: none; border-radius: 7px; padding: 10px 14px; font-size: 13px; font-weight: 600; cursor: pointer; }
+.btnMoodle:hover { background: #3a2070; }
+.btnSuccess      { background: #22a861; color: #fff; border: none; border-radius: 7px; padding: 10px 14px; font-size: 13px; font-weight: 600; cursor: pointer; }
+.btnSuccess:hover { background: #1a8a4e; }
+.btnSecondary    { background: #fff; color: #374151; border: 1px solid #d1d5db; border-radius: 7px; padding: 10px 16px; font-size: 13px; cursor: pointer; }
+.btnSecondary:hover { background: #f9fafb; }
+.btnRemind       { flex: 1; background: #7c3aed; color: #fff; border: none; border-radius: 7px; padding: 10px 16px; font-size: 13px; font-weight: 600; cursor: pointer; }
+.btnRemind:hover:not(:disabled) { background: #6d28d9; }
+.btnRemind:disabled { opacity: 0.6; cursor: not-allowed; }
+.btnCancelRemind { flex: 1; background: #fff; color: #7c3aed; border: 1px solid #7c3aed; border-radius: 7px; padding: 10px 16px; font-size: 13px; cursor: pointer; font-weight: 600; }
+.btnCancelRemind:hover { background: #faf5ff; }
+.remindNote { font-size: 12px; color: #7c3aed; font-weight: 600; margin-top: 12px; text-align: center; background: #ede9fe; padding: 10px; border-radius: 6px; }
+.wrap {
+  overflow-x: auto;
+  min-width: 0;
+}
+
+.calGrid,
+.cal-days-header {
+  min-width: 560px;
+}

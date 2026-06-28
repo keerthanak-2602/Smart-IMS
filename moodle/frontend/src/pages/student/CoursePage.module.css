@@ -1,0 +1,99 @@
+.loading { padding: 48px; text-align: center; color: var(--text-muted); }
+
+.page { }
+
+.courseHeader {
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border);
+}
+
+.breadcrumb { font-size: 13px; color: var(--text-muted); }
+.breadLink  { color: var(--primary); cursor: pointer; }
+.breadLink:hover { text-decoration: underline; }
+.breadCurrent { color: var(--text); font-weight: 600; }
+
+.layout {
+  display: grid;
+  grid-template-columns: 230px 1fr;
+  gap: 0;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  overflow: hidden;
+  min-height: 500px;
+}
+
+.sectionsNav {
+  background: var(--sidebar-bg);
+  padding: 0;
+  border-right: 1px solid rgba(255,255,255,0.1);
+}
+
+.courseTitle {
+  background: var(--primary);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 14px 16px;
+  line-height: 1.4;
+}
+
+.sectionItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 16px;
+  font-size: 13px;
+  color: rgba(255,255,255,0.8);
+  cursor: pointer;
+  transition: background 0.15s;
+}
+.sectionItem:hover  { background: rgba(255,255,255,0.1); color: #fff; }
+.sectionActive      { background: var(--primary) !important; color: #fff !important; }
+
+.navDivider { height: 1px; background: rgba(255,255,255,0.1); margin: 8px 0; }
+
+.content { padding: 24px; }
+.contentTitle { font-size: 18px; font-weight: 700; margin-bottom: 16px; color: var(--text); }
+
+.empty {
+  padding: 32px;
+  text-align: center;
+  color: var(--text-muted);
+  background: #f8f9fa;
+  border-radius: 6px;
+  border: 1px dashed var(--border);
+}
+
+.assignmentList { display: flex; flex-direction: column; gap: 2px; }
+
+.assignmentRow {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 16px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.15s;
+  margin-bottom: 6px;
+}
+.assignmentRow:hover { background: #f8f9fa; border-color: var(--primary-light); }
+
+.assignIcon { font-size: 20px; flex-shrink: 0; }
+.assignInfo { flex: 1; }
+.assignTitle { font-size: 14px; font-weight: 600; color: var(--primary); }
+.assignTitle:hover { text-decoration: underline; }
+.assignMeta { font-size: 12px; color: var(--text-muted); margin-top: 3px; display: flex; align-items: center; gap: 6px; }
+.dot { color: #ccc; }
+.assignStatus { flex-shrink: 0; }
+
+.sectionPlaceholder {
+  text-align: center;
+  padding: 64px 24px;
+  color: var(--text-muted);
+}
+.placeholderIcon { font-size: 48px; margin-bottom: 12px; }
+.sectionPlaceholder h3 { font-size: 18px; color: var(--text); margin-bottom: 8px; }
+.sectionPlaceholder p  { font-size: 14px; }

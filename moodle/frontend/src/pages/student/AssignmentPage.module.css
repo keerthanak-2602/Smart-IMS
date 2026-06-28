@@ -1,0 +1,115 @@
+.loading { padding: 48px; text-align: center; color: var(--text-muted); }
+
+.page { max-width: 900px; }
+
+.breadcrumb {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-bottom: 16px;
+}
+.breadLink { color: var(--primary); cursor: pointer; }
+.breadLink:hover { text-decoration: underline; }
+
+.title {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 16px;
+}
+
+.description {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 16px;
+  margin-bottom: 20px;
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--text);
+}
+
+.statusTable { margin-bottom: 24px; }
+.statusTitle {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 0;
+  padding: 12px 16px;
+  background: #f8f9fa;
+  border: 1px solid var(--border);
+  border-bottom: none;
+  border-radius: 4px 4px 0 0;
+}
+
+.table { width: 100%; border-collapse: collapse; border: 1px solid var(--border); }
+
+.table tr { border-bottom: 1px solid var(--border); }
+.table tr:last-child { border-bottom: none; }
+
+.label {
+  width: 200px;
+  padding: 12px 16px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text);
+  background: #f8f9fa;
+  border-right: 1px solid var(--border);
+  vertical-align: top;
+}
+
+.value {
+  padding: 12px 16px;
+  font-size: 14px;
+  color: var(--text);
+  background: #fff;
+}
+
+.rowGreen td { background: #d4edda !important; }
+.rowRed   td { background: #f8d7da !important; }
+
+.fileLink { color: var(--primary); font-size: 14px; }
+.fileLink:hover { text-decoration: underline; }
+.noFile { color: var(--text-muted); font-size: 13px; font-style: italic; }
+.commentsLink { color: var(--primary); cursor: pointer; font-size: 13px; }
+
+.uploadArea { margin-bottom: 20px; }
+.uploadTitle { font-size: 16px; font-weight: 600; margin-bottom: 10px; }
+
+.dropzone {
+  border: 2px dashed var(--border);
+  border-radius: 6px;
+  padding: 32px;
+  text-align: center;
+  cursor: pointer;
+  transition: border-color 0.15s, background 0.15s;
+}
+.dropzone:hover { border-color: var(--primary); background: #f8f4ff; }
+
+.dropIcon { font-size: 32px; margin-bottom: 8px; }
+.dropText { font-size: 14px; font-weight: 600; color: var(--primary); margin-bottom: 6px; }
+.dropHint { font-size: 12px; color: var(--text-muted); }
+
+.actions {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+}
+
+.editNote {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-bottom: 24px;
+}
+
+.navFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid var(--border);
+  padding-top: 16px;
+  margin-top: 32px;
+  font-size: 13px;
+  flex-wrap: wrap;
+  gap: 8px;
+}
