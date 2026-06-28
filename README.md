@@ -341,8 +341,7 @@ Open `http://localhost:3000` in your browser to access the IMS, and log in using
 
 ## 📸 Screenshots
 
->
-## 📸 Screenshots
+
 
 | Institute Management System (IMS)                                                  | Learning Management System (LMS)                                                           |
 | ---------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------ |
